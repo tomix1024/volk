@@ -1789,6 +1789,11 @@ extern PFN_vkAcquireNextImage2KHR vkAcquireNextImage2KHR;
 #endif /* (defined(VK_KHR_device_group) && defined(VK_KHR_swapchain)) || (defined(VK_KHR_swapchain) && defined(VK_VERSION_1_1)) */
 /* VOLK_GENERATE_PROTOTYPES_H */
 
+// Having VK_NO_PROTOTYPES is technically incorrect from this point on.
+// Other libraries can use the prototypes that we declared here.
+#undef VK_NO_PROTOTYPES
+
+
 #ifdef __cplusplus
 }
 #endif
