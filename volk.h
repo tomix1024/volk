@@ -2747,6 +2747,11 @@ extern PFN_vkAcquireNextImage2KHR vkAcquireNextImage2KHR;
 /* VOLK_GENERATE_PROTOTYPES_H_DEVICE */
 #endif
 
+// Having VK_NO_PROTOTYPES is technically incorrect from this point on.
+// Other libraries can use the prototypes that we declared here.
+#undef VK_NO_PROTOTYPES
+
+
 #ifdef __cplusplus
 } // extern "C" / namespace volk
 #endif
